@@ -1,0 +1,52 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://MickeyQ1.png" type="Texture" id=1]
+[ext_resource path="res://TileQ1.png" type="Texture" id=2]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 757.165, 1026.32 )
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 1022.09, 1030.74 )
+
+[node name="world" type="Node2D"]
+
+[node name="Player 1" type="KinematicBody2D" parent="."]
+position = Vector2( 348.307, 298.702 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Player 1"]
+position = Vector2( 129.526, -125.245 )
+scale = Vector2( 0.1507, 0.149084 )
+shape = SubResource( 1 )
+
+[node name="Mickey" type="Sprite" parent="Player 1"]
+position = Vector2( 129.526, -125.245 )
+scale = Vector2( 0.1507, 0.149084 )
+texture = ExtResource( 1 )
+region_rect = Rect2( 0, 0, 100, 10 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Wall" type="StaticBody2D" parent="."]
+position = Vector2( 444.547, 560.632 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Wall"]
+position = Vector2( 35.9073, -37.437 )
+scale = Vector2( 0.114459, 0.123755 )
+shape = SubResource( 2 )
+
+[node name="Sprite" type="Sprite" parent="Wall"]
+position = Vector2( 35.9073, -37.4369 )
+scale = Vector2( 0.114459, 0.123755 )
+texture = ExtResource( 2 )
+__meta__ = {
+"_edit_group_": true
+}
+
